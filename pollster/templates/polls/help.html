@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="text-center mb-3">Polls</h1>
+<h2>
+  {{name}} is {{age}}
+  <br>
+  <!-- ! If/Else -->
+  {% if is_active %}
+  The user is active
+  {% else %}
+  The user is inactive
+  {%endif%}
+  
+</h2>
+<h3>
+  Sexy Ladies
+  <ul>
+  </ul>
+  <li>
+    {% for lady in interests %}
+    {{lady}}
+    {% endfor %}
+  </li>
+
+</h3>
+{% endblock %}
